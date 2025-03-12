@@ -9,7 +9,6 @@ import {
   Button,
 } from "react-native";
 import api from "../axios/axios";
-import Cadastro from "./Cadastro";
 
 export default function Login({ navigation }) {
   const [user, setUser] = useState({
