@@ -21,6 +21,7 @@ export default function Login({ navigation }) {
       (response) => {
         console.log(response.data.message);
         Alert.alert(response.data.message);
+        navigation.navigate("Home")
       },
       (error) => {
         Alert.alert(error.response.data.error);
