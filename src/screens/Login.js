@@ -10,8 +10,12 @@ import {
 } from "react-native";
 import api from "../axios/axios";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from '@react-navigation/native'
 
-export default function Login({ navigation }) {
+export default function Login() {
+
+  const navigation = useNavigation()
+
   const [user, setUser] = useState({
     email: "",
     password: "",
