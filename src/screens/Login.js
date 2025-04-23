@@ -27,7 +27,7 @@ export default function Login() {
       (response) => {
         console.log(response.data.message);
         Alert.alert(response.data.message);
-        navigation.navigate("Home");
+        navigation.navigate("EventoScreen");
       },
       (error) => {
         console.log(error);
