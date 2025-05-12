@@ -19,7 +19,7 @@ export default function EventoScreen() {
 
   useEffect(() => {
     getEventos();
-  });
+  }, []);
 
   async function getEventos() {
     try {
