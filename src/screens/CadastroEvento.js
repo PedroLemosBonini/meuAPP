@@ -8,6 +8,7 @@ import {
   StyleSheet
 } from "react-native";
 import api from "../axios/axios";
+import DateTimePicker from "../components/DateTimePicker";
 
 export default function CadastroEvento() {
   const [evento, setEvento] = useState({
@@ -58,6 +59,16 @@ export default function CadastroEvento() {
           setEvento({ ...evento, data_hora: value });
         }}
       />
+      <DateTimePicker
+      type={"datetime"}
+      buttonTitle={
+        evento.data_hora === "" ? "Selecione a data do evento" : evento.data_hora.toLocaleString()
+      }
+      setValue={setEvento}
+      dateKey={"data_hora"}
+      >
+        
+      </DateTimePicker>
       <TextInput
         style={styles.input}
         placeholder="Local"
